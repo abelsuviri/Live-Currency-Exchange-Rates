@@ -16,7 +16,6 @@ gen/
 out/
 
 # Gradle files
-.gradle/
 build/
 
 # Local configuration file (sdk path, etc)
@@ -71,15 +70,10 @@ fastlane/readme.md
 LiveCurrencyExchange.iml
 app/.DS_Store
 app/libs/
-build.gradle
 data/.DS_Store
 data/libs/
 data/src/main/res/drawable/
-gradle.properties
-gradle/
-gradlew
-gradlew.bat
-settings.gradle
 viewmodel/.DS_Store
 viewmodel/libs/
 viewmodel/src/main/res/drawable/
+.gradle/

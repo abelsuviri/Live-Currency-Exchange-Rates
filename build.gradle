@@ -1,0 +1,42 @@
+buildscript {
+    ext.buildToolsVersion = '28.0.2'
+    ext.minCompileVersion = 16
+    ext.targetVersion = 28
+    ext.versionCode = 1
+    ext.versionName = '1.0'
+
+    ext.androidXVersion = '1.0.0-rc01'
+    ext.constraintLayoutVersion = '1.1.2'
+    ext.coroutinesVersion = '0.23.2'
+    ext.coroutinesAdapterVersion = '1.0.0'
+    ext.daggerVersion = '2.16'
+    ext.gsonVersion = '2.8.5'
+    ext.junitVersion = '4.12'
+    ext.kotlinVersion = '1.2.60'
+    ext.lifecycleVersion = '2.0.0-rc01'
+    ext.mockitoVersion = '2.15.0'
+    ext.okhttpVersion = '3.10.0'
+    ext.retrofitVersion = '2.4.0'
+    ext.rxAndroidVersion = '2.0.1'
+    ext.rxJavaVersion =  '2.2.0'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.0-alpha07'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
