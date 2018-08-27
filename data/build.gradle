@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion targetVersion
+    buildToolsVersion buildToolsVersion
+
+
+    defaultConfig {
+        minSdkVersion minCompileVersion
+        targetSdkVersion targetVersion
+        versionCode versionCode
+        versionName versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    api "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    api "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-experimental-adapter:$coroutinesAdapterVersion"
+    api "com.google.dagger:dagger:$daggerVersion"
+    api "com.google.code.gson:gson:$gsonVersion"
+    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
+    api "com.squareup.retrofit2:retrofit:$retrofitVersion"
+}
